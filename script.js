@@ -88,10 +88,13 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Array to store character types to include in password
+var passwordList = [];
+var passwordLength = 0;
+
 // Function to prompt user for password options
-let passwordList = [];
 function getPasswordOptions() {
-  var passwordLength = parseInt(prompt("How long would you like your password to be? (between 10-64 characters): "))
+  passwordLength = parseInt(prompt("How long would you like your password to be? (between 10-64 characters): "))
   if (passwordLength < 10 || passwordLength > 64) {
     alert("Please enter a valid password length between 10-64 characters");
     return getPasswordOptions();
@@ -112,6 +115,10 @@ function getPasswordOptions() {
   if (includeUpper === true) {
     passwordList = passwordList.concat(upperCasedCharacters)
   };
+  if (passwordList.length === 0) {
+    alert("Please select at least one of the character types");
+    return getPasswordOptions();
+  }
 }
 
 // Function for getting a random element from an array
@@ -124,7 +131,10 @@ function getRandom(arr) {
 function generatePassword() {
   let password = "";
   getPasswordOptions()
-
+  for(let i = 0; i < passwordLength; i++) {
+    password += getRandom(passwordList);
+    }
+    return password;
 }
 
 // Get references to the #generate element
