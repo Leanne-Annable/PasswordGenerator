@@ -99,16 +99,10 @@ function getPasswordOptions() {
     alert("Please enter a valid password length between 10-64 characters");
     return getPasswordOptions();
   }
-  var includeSpecial = confirm("Would you like to include Special characters?: ")
-  var includeNum = confirm("Would you like to include numbers?: ")
   var includeLower = confirm("Would you like to include Lower case letters?: ")
   var includeUpper = confirm("Would you like to include Upper case letters?: ")
-  if (includeSpecial === true) {
-    passwordList = passwordList.concat(specialCharacters)
-  };
-  if (includeNum === true) {
-    passwordList = passwordList.concat(numericCharacters)
-  };
+  var includeNum = confirm("Would you like to include numbers?: ")
+  var includeSpecial = confirm("Would you like to include Special characters?: ")
   if (includeLower === true) {
     passwordList = passwordList.concat(lowerCasedCharacters)
   };
@@ -119,6 +113,12 @@ function getPasswordOptions() {
     alert("Please select at least one of the character types");
     return getPasswordOptions();
   }
+  if (includeNum === true) {
+    passwordList = passwordList.concat(numericCharacters)
+  };
+  if (includeSpecial === true) {
+    passwordList = passwordList.concat(specialCharacters)
+  };
 }
 
 // Function for getting a random element from an array
