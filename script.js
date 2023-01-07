@@ -97,16 +97,16 @@ function getPasswordOptions() {
   var includeLower = confirm("Would you like to include Lower case letters?: ")
   var includeUpper = confirm("Would you like to include Upper case letters?: ")
   if (includeSpecial === true) {
-    passwordList = passwordList.concat(includeSpecial)
+    passwordList = passwordList.concat(specialCharacters)
   };
   if (includeNum === true) {
-    passwordList = passwordList.concat(includeNum)
+    passwordList = passwordList.concat(numericCharacters)
   };
   if (includeLower === true) {
-    passwordList = passwordList.concat(includeLower)
+    passwordList = passwordList.concat(lowerCasedCharacters)
   };
   if (includeUpper === true) {
-    passwordList = passwordList.concat(includeUpper)
+    passwordList = passwordList.concat(upperCasedCharacters)
   };
 }
 
