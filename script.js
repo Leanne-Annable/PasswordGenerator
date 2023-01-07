@@ -134,7 +134,7 @@ function generatePassword() {
   for(let i = 0; i < passwordLength; i++) {
     password += getRandom(passwordList);
     }
-    return password;
+    return password;    
 }
 
 // Get references to the #generate element
@@ -142,6 +142,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+  passwordList = []
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
