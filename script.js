@@ -92,6 +92,10 @@ var upperCasedCharacters = [
 let passwordList = [];
 function getPasswordOptions() {
   var passwordLength = parseInt(prompt("How long would you like your password to be? (between 10-64 characters): "))
+  if (passwordLength < 10 || passwordLength > 64) {
+    alert("Please enter a valid password length between 10-64 characters");
+    return getPasswordOptions();
+  }
   var includeSpecial = confirm("Would you like to include Special characters?: ")
   var includeNum = confirm("Would you like to include numbers?: ")
   var includeLower = confirm("Would you like to include Lower case letters?: ")
