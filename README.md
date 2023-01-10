@@ -16,13 +16,13 @@ You can then click the button again to go through the questions again and genera
 
 (Walkthrough images below)
 
-![opening-page](images/starter-screen.jpg)<br>
-![first-option](images/first-option.jpg)<br>
-![second-option](images/second-option.jpg)<br>
-![third-option](images/third-option.jpg)<br>
-![fourth-option](images/fourth-option.jpg)<br>
-![fifth-option](images/fifth-option.jpg)<br>
-![end-result](images/end-result.jpg)
+![opening-page](assets/images/starter-screen.jpg)<br>
+![first-option](assets/images/first-option.jpg)<br>
+![second-option](assets/images/second-option.jpg)<br>
+![third-option](assets/images/third-option.jpg)<br>
+![fourth-option](assets/images/fourth-option.jpg)<br>
+![fifth-option](assets/images/fifth-option.jpg)<br>
+![end-result](assets/images/end-result.jpg)
 
 Link to active website: https://Leanne-Annable.github.io/PasswordGenerator
 

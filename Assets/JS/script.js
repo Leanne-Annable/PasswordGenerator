@@ -95,6 +95,10 @@ var passwordLength = 0;
 // Function to prompt user for password options
 function getPasswordOptions() {
   passwordLength = parseInt(prompt("How long would you like your password to be? (between 10-64 characters): "))
+  if (isNaN(passwordLength)) {
+    alert("Input must be in numerical form");
+    return getPasswordOptions();
+  }
   if (passwordLength < 10 || passwordLength > 64) {
     alert("Please enter a valid password length between 10-64 characters");
     return getPasswordOptions();
@@ -109,16 +113,16 @@ function getPasswordOptions() {
   if (includeUpper === true) {
     passwordList = passwordList.concat(upperCasedCharacters)
   };
-  if (passwordList.length === 0) {
-    alert("Please select at least one of the character types");
-    return getPasswordOptions();
-  }
   if (includeNum === true) {
     passwordList = passwordList.concat(numericCharacters)
   };
   if (includeSpecial === true) {
     passwordList = passwordList.concat(specialCharacters)
   };
+  if (passwordList.length === 0) {
+    alert("Please select at least one of the character types");
+    return getPasswordOptions();
+  }
 }
 
 // Function for getting a random element from an array
